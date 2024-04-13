@@ -1,0 +1,6 @@
+.converter__form {
+  display: flex;
+  justify-content: space-between;
+  max-width: 682px;
+  margin: 0 auto;
+}
