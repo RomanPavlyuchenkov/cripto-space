@@ -18,13 +18,42 @@
           Конвертируйте криптовалюту в USD, EUR и RUB.
         </h1>
         <form class="converter__form">
-          <fieldset class="converter__fieldset">
-            <input class="converter__input" type="number" />
-            <button class="converter__button"></button>
+          <fieldset
+            class="converter__fieldset converter__fieldset_type_cryptocurrency"
+          >
+            <input
+              class="converter__input converter__input_type_cryptocurrency"
+              type="number"
+            />
+            <button type="button" class="converter__button-search-coin">
+              <p class="converter__button-inner-text"></p>
+            </button>
+            <!--   Поиск криптовалюты -->
+            <div class="converter__searchCoin">
+              <input
+                type="text"
+                class="converter__searchCoin-input"
+                minlength="1"
+                maxlength="4"
+              />
+              <template class="template">
+                <option class="option" value=""></option>
+              </template>
+              <select class="converter__searchCoin-select" size="4"></select>
+            </div>
           </fieldset>
-          <fieldset class="converter__fieldset">
-            <input class="converter__input" type="number" />
-            <button class="converter__button"></button>
+          <fieldset
+            class="converter__fieldset converter__fieldset_type_currency"
+          >
+            <input
+              class="converter__input converter__input_type_currency"
+              type="number"
+            />
+            <select class="converter__select-currency">
+              <option id="usd">USD</option>
+              <option id="rub">RUB</option>
+              <option id="eur">EUR</option>
+            </select>
           </fieldset>
         </form>
       </section>

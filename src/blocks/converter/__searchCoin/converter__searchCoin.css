@@ -1,0 +1,8 @@
+.converter__searchCoin {
+  width: 85px;
+  height: 100px;
+  background-color: #ffffff85;
+  position: absolute;
+  right: 0;
+  bottom: -75px;
+}

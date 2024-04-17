@@ -1,0 +1,13 @@
+.converter__select-currency {
+  width: 85px;
+  height: 42px;
+  border: 0;
+  padding: 0;
+  border-radius: 52px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  outline: none;
+}
