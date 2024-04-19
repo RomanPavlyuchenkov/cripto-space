@@ -8,27 +8,29 @@ import Converter from "../components/Converter";
 const converter = new Converter({
   searchContainer: ".converter__searchCoin",
   cryptocurrency: ".converter__input_type_cryptocurrency",
-  currency: ".converter__fieldset_type_currency",
+  currency: ".converter__input_type_currency",
+  selectCurrency: ".converter__select-currency",
 });
+
 converter.handleSearhCoin();
 converter.handleSendCoinn(getCoin);
+converter.handleSendCurrency(getCoin);
+
 const apiCryptoCompare = new ApiCryptoCompare();
-//Делаем запрос на BTC при загрузке страницы
+//При загрузке страницы загружаем BTC
 apiCryptoCompare
-  .getCoinPrice("BTC")
+  .getCoinPrice("BTC", "USD")
   .then((data) => {
     converter.showСourse(data, "BTC");
   })
   .catch((err) => {
     console.log(`catch: ${err}`);
   });
-
 //Отправляем выбранную монету в api
-function getCoin(coin) {
+function getCoin(coin, currency) {
   apiCryptoCompare
-    .getCoinPrice(coin)
+    .getCoinPrice(coin, currency)
     .then((data) => {
-      console.log(data);
       converter.showСourse(data, coin);
     })
     .catch((err) => {
