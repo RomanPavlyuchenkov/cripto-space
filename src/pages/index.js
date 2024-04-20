@@ -6,7 +6,7 @@ import Section from "../components/Section";
 import Converter from "../components/Converter";
 
 const converter = new Converter({
-  searchContainer: ".converter__searchCoin",
+  searchContainer: ".converter__search-cryptocurrency",
   cryptocurrency: ".converter__input_type_cryptocurrency",
   currency: ".converter__input_type_currency",
   selectCurrency: ".converter__select-currency",
@@ -56,4 +56,4 @@ function renderElement(element) {
   renderOption.addItem(optionElement);
 }
 
-const renderOption = new Section(".converter__searchCoin-select");
+const renderOption = new Section(".converter__cryptocurrency-select");

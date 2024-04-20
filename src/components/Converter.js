@@ -3,10 +3,10 @@ export default class Converter {
   constructor(data) {
     this._searchContainer = document.querySelector(data.searchContainer);
     this._searchInput = this._searchContainer.querySelector(
-      ".converter__searchCoin-input"
+      ".converter__search-cryptocurrency-input"
     );
     this._selectCryptocurrency = this._searchContainer.querySelector(
-      ".converter__searchCoin-select"
+      ".converter__cryptocurrency-select"
     );
     this._cryptocurrency = document.querySelector(data.cryptocurrency);
     this._currency = document.querySelector(data.currency);
@@ -38,10 +38,10 @@ export default class Converter {
     // Функция для выполнения поиска
     // Получаем значение введенное пользователем
     const input = document
-      .querySelector(".converter__searchCoin-input")
+      .querySelector(".converter__search-cryptocurrency-input")
       .value.toLowerCase();
     // Получаем список элементов выбора
-    const select = document.querySelector(".converter__searchCoin-select");
+    const select = document.querySelector(".converter__cryptocurrency-select");
     // Получаем список опций
     const options = select.getElementsByTagName("option");
 

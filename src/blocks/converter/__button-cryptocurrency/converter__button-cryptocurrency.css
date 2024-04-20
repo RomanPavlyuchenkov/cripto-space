@@ -1,4 +1,4 @@
-.converter__button-search-coin {
+.converter__button-cryptocurrency {
   width: 85px;
   height: 42px;
   border: 0;
@@ -18,14 +18,14 @@
   background-color: #fff;
 }
 
-.converter__button-search-coin::after {
+.converter__button-cryptocurrency::after {
   content: "";
   width: 12px;
   height: 10px;
   background-image: url(../../../images/arrow.svg);
 }
 
-.converter__button-search-coin p {
+.converter__button-cryptocurrency p {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
