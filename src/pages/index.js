@@ -15,7 +15,7 @@ const converter = new Converter({
 converter.handleSearhCoin();
 converter.handleSendCoinn(getCoin);
 converter.handleSendCurrency(getCoin);
-
+converter.handleShowCryptoCurrencyContainer();
 const apiCryptoCompare = new ApiCryptoCompare();
 //При загрузке страницы загружаем BTC
 apiCryptoCompare

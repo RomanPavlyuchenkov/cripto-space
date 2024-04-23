@@ -4,3 +4,18 @@
   max-width: 682px;
   margin: 0 auto;
 }
+
+@media (max-width: 930px) {
+  .converter__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 387px;
+  }
+}
+
+@media (max-width: 410px) {
+  .converter__form {
+    max-width: 247px;
+  }
+}

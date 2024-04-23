@@ -2,6 +2,7 @@ import { selectCryptoCurrency, selectCurrency } from "../utils/constants.js";
 export default class Converter {
   constructor(data) {
     this._searchContainer = document.querySelector(data.searchContainer);
+
     this._searchInput = this._searchContainer.querySelector(
       ".converter__search-cryptocurrency-input"
     );
@@ -14,9 +15,59 @@ export default class Converter {
   }
 
   showСourse(data, coin) {
-    document.querySelector(".converter__button-inner-text").textContent = coin;
+    document.querySelector(
+      ".converter__button-cryptocurrency option"
+    ).textContent = coin;
     this._cryptocurrency.value = "1";
     this._currency.value = Object.values(data)[0];
+    this._converter(data);
+  }
+  _converter(data) {
+    const cryptocurrencyInput = document.querySelector(
+      ".converter__input_type_cryptocurrency"
+    );
+    const currencyInput = document.querySelector(
+      ".converter__input_type_currency"
+    );
+    const courseCoin = Object.values(data)[0];
+    cryptocurrencyInput.addEventListener("input", function () {
+      currencyInput.value = cryptocurrencyInput.value * courseCoin;
+    });
+    currencyInput.addEventListener("input", function () {
+      cryptocurrencyInput.value = currencyInput.value / courseCoin;
+    });
+  }
+  handleShowCryptoCurrencyContainer() {
+    document
+      .querySelector(".converter__button-cryptocurrency")
+      .addEventListener("click", () => {
+        this._searchContainer.classList.toggle(
+          "converter__search-cryptocurrency_type_active"
+        );
+      });
+    this._closeOverlay();
+  }
+  _closeOverlay() {
+    window.addEventListener("click", (e) => {
+      // при клике в любом месте окна браузера
+      const target = e.target; // находим элемент, на котором был клик
+      if (
+        !target.closest(".converter__button-cryptocurrency") &&
+        !target.closest(".converter__search-cryptocurrency-input")
+      ) {
+        // Метод closest ищет ближайший родительский элемент, подходящий под указанный CSS селектор, при этом сам элемент тоже включается в поиск
+        this._searchContainer.classList.remove(
+          "converter__search-cryptocurrency_type_active"
+        ); // то закрываем окно , удаляя активный класс
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        this._searchContainer.classList.remove(
+          "converter__search-cryptocurrency_type_active"
+        );
+      }
+    });
   }
   //Отправить value селектов
   handleSendCurrency(getCoin) {

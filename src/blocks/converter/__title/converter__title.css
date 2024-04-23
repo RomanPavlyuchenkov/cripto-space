@@ -7,3 +7,17 @@
   color: #fff;
   margin: 30px auto 46px;
 }
+@media (max-width: 690px) {
+  .converter__title {
+    font-size: 40px;
+    max-width: 670px;
+    margin: 25px auto 25px;
+  }
+}
+
+@media (max-width: 570px) {
+  .converter__title {
+    font-size: 40px;
+    max-width: 380px;
+  }
+}

@@ -13,3 +13,4 @@
 @import url(../blocks/converter/__button-cryptocurrency/converter__button-cryptocurrency.css);
 @import url(../blocks/converter/__cryptocurrency-select/converter__cryptocurrency-select.css);
 @import url(../blocks/converter/__select-currency/converter__select-currency.css);
+@import url(../blocks/converter/__search-cryptocurrency/_type/converter__search-cryptocurrency_type_active.css);
