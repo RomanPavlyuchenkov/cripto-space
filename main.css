@@ -9,7 +9,7 @@
 .converter__search-cryptocurrency{background-color:#ffffff85;bottom:-75px;display:none;height:100px;position:absolute;right:0;width:100px}@media (max-width:410px){.converter__search-cryptocurrency{bottom:-98px;right:93px}}
 .converter__fieldset_type_cryptocurrency{position:relative}
 .converter__search-cryptocurrency-input{border:0;box-sizing:border-box;font-family:Inter,sans-serif;height:24px;outline:none;padding:0 5px;width:100%}
-.converter__button-cryptocurrency{border:0;border-radius:52px;color:#000;font-family:Inter,sans-serif;font-size:20px;font-weight:400;height:42px;outline:none;padding:0;text-align:center;width:100px}
+.converter__button-cryptocurrency{border:0;border-radius:52px;color:#000;font-family:Inter,sans-serif;font-size:20px;font-weight:400;height:42px;outline:none;padding:0;text-align:center;width:100px}.converter__button-cryptocurrency option{display:none}
 .converter__cryptocurrency-select{font-family:Inter,sans-serif;font-size:20px;font-weight:400;height:100%;outline:none;width:100%}
 .converter__select-currency{border:0;border-radius:52px;color:#000;font-family:Inter,sans-serif;font-size:20px;font-weight:400;height:42px;outline:none;padding:0;text-align:center;width:85px}
 .converter__search-cryptocurrency_type_active{display:block}
