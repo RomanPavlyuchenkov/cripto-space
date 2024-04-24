@@ -4,6 +4,14 @@
   outline: none;
   border: 0;
   width: 100%;
-  height: 24px;
+  height: 30px;
   font-family: "Inter", sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width: 930px) {
+  .converter__search-cryptocurrency-input {
+    height: 35px;
+    text-align: center;
+  }
 }

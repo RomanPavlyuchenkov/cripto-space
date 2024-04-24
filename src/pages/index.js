@@ -7,15 +7,14 @@ import Converter from "../components/Converter";
 
 const converter = new Converter({
   searchContainer: ".converter__search-cryptocurrency",
+  searchContainerCurrency: ".converter__search-currency",
   cryptocurrency: ".converter__input_type_cryptocurrency",
   currency: ".converter__input_type_currency",
-  selectCurrency: ".converter__select-currency",
 });
 
 converter.handleSearhCoin();
-converter.handleSendCoinn(getCoin);
-converter.handleSendCurrency(getCoin);
 converter.handleShowCryptoCurrencyContainer();
+converter.handleShowCurrencyContainer();
 const apiCryptoCompare = new ApiCryptoCompare();
 //При загрузке страницы загружаем BTC
 apiCryptoCompare
@@ -27,6 +26,9 @@ apiCryptoCompare
     console.log(`catch: ${err}`);
   });
 //Отправляем выбранную монету в api
+export function getSelects(coin, currency) {
+  getCoin(coin, currency);
+}
 function getCoin(coin, currency) {
   apiCryptoCompare
     .getCoinPrice(coin, currency)

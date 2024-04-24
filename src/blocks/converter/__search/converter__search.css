@@ -1,0 +1,29 @@
+.converter__search {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -6px;
+  bottom: -75px;
+  display: none;
+  z-index: 1;
+}
+
+@media (max-width: 930px) {
+  .converter__search {
+    width: 180px;
+    height: 180px;
+    bottom: -154px;
+    right: -41px;
+  }
+}
+
+@media (max-width: 470px) {
+  .converter__search {
+    right: 54px;
+    bottom: -119px;
+  }
+}
+
+.converter__search-cryptocurrency {
+  z-index: 2;
+}

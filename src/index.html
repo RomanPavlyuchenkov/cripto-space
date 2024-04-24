@@ -26,25 +26,27 @@
               class="converter__input converter__input_type_cryptocurrency"
               type="number"
             />
-            <!--    select используем как кнопку для открытия контейнера поиска -->
-            <select class="converter__button-cryptocurrency">
-              <option></option>
-            </select>
+            <button
+              type="button"
+              class="converter__button converter__button-cryptocurrency"
+            >
+              <p
+                class="converter__button-inner-text converter__button-inner-text-cryptocurrency"
+              ></p>
+            </button>
             <!--   Поиск криптовалюты -->
-            <div class="converter__search-cryptocurrency">
+            <div class="converter__search converter__search-cryptocurrency">
               <input
+                placeholder="Поиск"
                 type="text"
                 class="converter__search-cryptocurrency-input"
                 minlength="1"
                 maxlength="4"
               />
               <template class="template">
-                <option class="option" value="" selected></option>
+                <li class="option"></li>
               </template>
-              <select
-                class="converter__cryptocurrency-select"
-                size="4"
-              ></select>
+              <ul class="converter__cryptocurrency-select"></ul>
             </div>
           </fieldset>
           <!--    Валюта -->
@@ -55,11 +57,22 @@
               class="converter__input converter__input_type_currency"
               type="number"
             />
-            <select class="converter__select-currency">
-              <option value="USD">USD</option>
-              <option value="RUB">RUB</option>
-              <option value="EUR">EUR</option>
-            </select>
+            <button
+              type="button"
+              class="converter__button converter__button-currency"
+            >
+              <p
+                class="converter__button-inner-text converter__button-inner-text-currency"
+              ></p>
+            </button>
+            <!--  Выбор валюты -->
+            <div class="converter__search converter__search-currency">
+              <ul class="converter__currency-select">
+                <li class="option">USD</li>
+                <li class="option">RUB</li>
+                <li class="option">EUR</li>
+              </ul>
+            </div>
           </fieldset>
         </form>
       </section>

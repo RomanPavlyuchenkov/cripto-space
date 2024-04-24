@@ -7,10 +7,10 @@
 @import url(../blocks/converter/__form/converter__form.css);
 @import url(../blocks/converter/__fieldset/converter__fieldset.css);
 @import url(../blocks/converter/__input/converter__input.css);
-@import url(../blocks/converter/__search-cryptocurrency/converter__search-cryptocurrency.css);
+@import url(../blocks/converter/__search/converter__search.css);
 @import url(../blocks/converter/__fieldset/_type/converter__fieldset_type_cryptocurrency.css);
 @import url(../blocks/converter/__search-cryptocurrency-input/converter__search-cryptocurrency-input.css);
-@import url(../blocks/converter/__button-cryptocurrency/converter__button-cryptocurrency.css);
+@import url(../blocks/converter/__button/converter__button.css);
 @import url(../blocks/converter/__cryptocurrency-select/converter__cryptocurrency-select.css);
-@import url(../blocks/converter/__select-currency/converter__select-currency.css);
-@import url(../blocks/converter/__search-cryptocurrency/_type/converter__search-cryptocurrency_type_active.css);
+@import url(../blocks/converter/__search/_type/converter__search_type_active.css);
+@import url(../blocks/converter/__currency-select/converter__currency-select.css);

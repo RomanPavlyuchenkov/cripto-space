@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 470px) {
   .converter__fieldset {
     flex-direction: column;
   }
