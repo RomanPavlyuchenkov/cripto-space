@@ -40,7 +40,7 @@ export default class Converter {
       cryptocurrencyInput.value = currencyInput.value / courseCoin;
     });
   }
-  ///////////Открытие и закрытие контейнера с поиском крипты
+  //////////////////////////////////Открытие и закрытие контейнеров
   handleShowCryptoCurrencyContainer() {
     document
       .querySelector(".converter__button-cryptocurrency")
@@ -48,7 +48,7 @@ export default class Converter {
         this._searchContainer.classList.toggle("converter__search_type_active");
         this._handleSendCryptoCurrency();
       });
-    this._closeOverlay();
+    this._closeOverlayCryptoCurrencyContainer();
   }
   handleShowCurrencyContainer() {
     document
@@ -59,25 +59,59 @@ export default class Converter {
         );
         this._handleSendCurrency();
       });
-    this._closeOverlay();
+    this._closeOverlayCurrencyContainer();
   }
-  _closeOverlay() {
-    window.addEventListener("click", (e) => {
+  _closeOverlayCryptoCurrencyContainer() {
+    window.addEventListener("touchend", (evt) => {
       // при клике в любом месте окна браузера
-      const target = e.target; // находим элемент, на котором был клик
+      const target = evt.target; // находим элемент, на котором был клик
       if (
-        !target.closest(".converter__button") &&
+        !target.closest(".converter__button-cryptocurrency") &&
+        !target.closest(".converter__search-cryptocurrency-input") &&
+        !target.closest(".option")
+      ) {
+        // Метод closest ищет ближайший родительский элемент, подходящий под указанный CSS селектор, при этом сам элемент тоже включается в поиск
+        this._searchContainer.classList.remove("converter__search_type_active"); // то закрываем окно , удаляя активный класс
+      }
+    });
+    window.addEventListener("click", (evt) => {
+      const target = evt.target;
+      if (
+        !target.closest(".converter__button-cryptocurrency") &&
         !target.closest(".converter__search-cryptocurrency-input")
+      ) {
+        this._searchContainer.classList.remove("converter__search_type_active");
+      }
+    });
+  }
+  _closeOverlayCurrencyContainer() {
+    window.addEventListener("touchend", (evt) => {
+      // при клике в любом месте окна браузера
+      const target = evt.target; // находим элемент, на котором был клик
+      if (
+        !target.closest(".converter__button-currency") &&
+        !target.closest(".converter__search-cryptocurrency-input") &&
+        !target.closest(".option")
       ) {
         // Метод closest ищет ближайший родительский элемент, подходящий под указанный CSS селектор, при этом сам элемент тоже включается в поиск
         this._searchContainerCurrency.classList.remove(
           "converter__search_type_active"
+        ); // то закрываем окно , удаляя активный класс
+      }
+    });
+    window.addEventListener("click", (evt) => {
+      const target = evt.target;
+      if (
+        !target.closest(".converter__button-currency") &&
+        !target.closest(".converter__search-cryptocurrency-input")
+      ) {
+        this._searchContainerCurrency.classList.remove(
+          "converter__search_type_active"
         );
-        this._searchContainer.classList.remove("converter__search_type_active"); // то закрываем окно , удаляя активный класс
       }
     });
   }
-  ////////////Отправить value селектов
+  ////////////////////////////////////////////////////Отправить value селектов
   _selectedCurrency() {
     const btnCryptoCurrency = document.querySelector(
       ".converter__button-inner-text-cryptocurrency"
@@ -104,7 +138,7 @@ export default class Converter {
       i.addEventListener("click", this._selectedCryptoCurrency);
     });
   }
-  ///////////Обработчик поиска монет
+  /////////////////////////////////////////////////Обработчик поиска монет
   handleSearhCoin() {
     this._searchInput.addEventListener("input", this._searchCoin);
   }

@@ -2,10 +2,11 @@
   width: 100px;
   height: 100px;
   position: absolute;
-  right: -6px;
-  bottom: -75px;
+  bottom: -74px;
+  right: -8px;
   display: none;
   z-index: 1;
+  background-color: #b9b9b9c9;
 }
 
 @media (max-width: 930px) {
@@ -14,6 +15,7 @@
     height: 180px;
     bottom: -154px;
     right: -41px;
+    background-color: #b9b9b9e3;
   }
 }
 
@@ -22,8 +24,4 @@
     right: 54px;
     bottom: -119px;
   }
-}
-
-.converter__search-cryptocurrency {
-  z-index: 2;
 }
