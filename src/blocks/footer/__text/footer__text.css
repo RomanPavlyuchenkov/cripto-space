@@ -1,0 +1,9 @@
+.footer__text {
+  margin: 0 auto;
+  max-width: 1200px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 10px;
+}

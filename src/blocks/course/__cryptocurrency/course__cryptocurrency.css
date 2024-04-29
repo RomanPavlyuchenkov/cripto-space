@@ -1,0 +1,14 @@
+.course__cryptocurrency {
+  width: 331px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 9px;
+}
+
+@media (max-width: 470px) {
+  .course__cryptocurrency {
+    width: 250px;
+    padding: 0 0 9px;
+  }
+}

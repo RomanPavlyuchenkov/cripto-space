@@ -1,0 +1,13 @@
+.course__coin {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (max-width: 470px) {
+  .course__coin {
+    font-size: 16px;
+  }
+}

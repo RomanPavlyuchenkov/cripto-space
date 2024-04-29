@@ -5,11 +5,6 @@ export default class Converter {
     this._searchContainerCurrency = document.querySelector(
       data.searchContainerCurrency
     );
-
-    this._searchInput = this._searchContainer.querySelector(
-      ".converter__search-cryptocurrency-input"
-    );
-
     this._cryptocurrency = document.querySelector(data.cryptocurrency);
     this._currency = document.querySelector(data.currency);
   }
@@ -140,7 +135,9 @@ export default class Converter {
   }
   /////////////////////////////////////////////////Обработчик поиска монет
   handleSearhCoin() {
-    this._searchInput.addEventListener("input", this._searchCoin);
+    document
+      .querySelector(".converter__search-cryptocurrency-input")
+      .addEventListener("input", this._searchCoin);
   }
   _searchCoin() {
     // Функция для выполнения поиска

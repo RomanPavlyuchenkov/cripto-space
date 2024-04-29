@@ -1,0 +1,17 @@
+.converter__search_type_cryptocurrency {
+  height: 130px;
+  bottom: -103px;
+}
+
+@media (max-width: 930px) {
+  .converter__search_type_cryptocurrency {
+    height: 180px;
+    bottom: -154px;
+  }
+}
+
+@media (max-width: 470px) {
+  .converter__search_type_cryptocurrency {
+    bottom: -118px;
+  }
+}

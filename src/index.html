@@ -35,7 +35,9 @@
               ></p>
             </button>
             <!--   Поиск криптовалюты -->
-            <div class="converter__search converter__search-cryptocurrency">
+            <div
+              class="converter__search converter__search_type_cryptocurrency"
+            >
               <input
                 placeholder="Поиск"
                 type="text"
@@ -66,7 +68,7 @@
               ></p>
             </button>
             <!--  Выбор валюты -->
-            <div class="converter__search converter__search-currency">
+            <div class="converter__search converter__search_type_currency">
               <ul class="converter__currency-select">
                 <li class="option">USD</li>
                 <li class="option">RUB</li>
@@ -76,6 +78,23 @@
           </fieldset>
         </form>
       </section>
+      <!-- Курсы криптовалют -->
+      <section class="course">
+        <h2 class="course__title">Курс криптовалют</h2>
+        <ul class="course__container">
+          <template class="template-course">
+            <li class="course__cryptocurrency">
+              <p class="course__coin"></p>
+              <p class="course__cost"></p>
+            </li>
+          </template>
+        </ul>
+      </section>
+      <footer class="footer">
+        <p class="footer__text">
+          Design and frontend development by Roman Pavlyuchenkov.
+        </p>
+      </footer>
     </div>
   </body>
 </html>

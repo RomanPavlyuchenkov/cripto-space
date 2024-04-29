@@ -4,10 +4,10 @@ import ApiCryptoRank from "../components/ApiCryptoRank";
 import Options from "../components/Options";
 import Section from "../components/Section";
 import Converter from "../components/Converter";
-
+import CourseCoins from "../components/CourseCoins";
 const converter = new Converter({
-  searchContainer: ".converter__search-cryptocurrency",
-  searchContainerCurrency: ".converter__search-currency",
+  searchContainer: ".converter__search_type_cryptocurrency",
+  searchContainerCurrency: ".converter__search_type_currency",
   cryptocurrency: ".converter__input_type_cryptocurrency",
   currency: ".converter__input_type_currency",
 });
@@ -39,7 +39,7 @@ function getCoin(coin, currency) {
       console.log(`catch: ${err}`);
     });
 }
-//Выводим монеты в select
+//Выводим монеты в select и на страницу
 const apiCryptoRank = new ApiCryptoRank();
 apiCryptoRank
   .getAllCoins()
@@ -56,6 +56,10 @@ function renderElement(element) {
   const option = new Options(".template", element);
   const optionElement = option.createOption();
   renderOption.addItem(optionElement);
+  const course = new CourseCoins(".template-course", element);
+  const courseElement = course.createOption();
+  renderCousre.addItem(courseElement);
 }
 
 const renderOption = new Section(".converter__cryptocurrency-select");
+const renderCousre = new Section(".course__container");

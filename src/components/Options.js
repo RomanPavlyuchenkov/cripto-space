@@ -8,9 +8,7 @@ export default class Options {
     const templeateElements = document.querySelector(
       this._templateSelector
     ).content;
-    const optionElement = templeateElements
-      .querySelector(".option")
-      .cloneNode(true);
+    const optionElement = templeateElements.querySelector("li").cloneNode(true);
     return optionElement;
   }
   createOption() {
